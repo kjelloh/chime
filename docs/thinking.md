@@ -2,6 +2,12 @@
 
 I find it productive and valuable to write down my thinking as I go along.
 
+## 20260915
+
+I now added the 'to_site.py' developed in my 'plaiground' git repo that orchestrates a local Jekyll site generation.
+
+* Seems to work just fine for this chime repo for now?
+
 ## 20260914
 
 I now have in 'plaiground' a mechanism that turns 'simple' eml-file to chime ok.
