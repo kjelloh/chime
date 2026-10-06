@@ -2,6 +2,46 @@
 
 I find it productive and valuable to write down my thinking as I go along.
 
+## 20261005
+
+I now whant to try out the new eml-to-entry mechanism developed in plaiground.
+
+* [plaiground/session/0dd1a71d](https://kjelloh.github.io/plaiground/session/0dd1a71d/session.html)
+* [eml_to_domain — user manual](https://kjelloh.github.io/plaiground/session/0dd1a71d/eml_to_domain/)
+* [domain_to_domain — user manual](https://kjelloh.github.io/plaiground/session/0dd1a71d/domain_to_domain/)
+
+Maybe the mechanism is now good enough to publish selected todo-mails as chimes?
+
+* Darn! The folder with the mechanism is littered with test scripts and files!
+* **Sigh** - All this littering going on!
+
+Ok, I cleaned them up.
+
+* But now, where do my exclude.md and pick.md files go for this specific import from my toto-mails?
+  * I mean, I don't want these to show in the git repo now on the generated site?
+  * But I also want to remember these filters?
+
+Hm... Tricky!
+
+Anyhow, does the mechanism produce sufficient result?
+
+* The eml_to_domain seem to work just fine?
+
+```sh
+kjell-olovhogdahl@MacBook-Pro ~/Documents/GitHub/chime % ./eml_to_domain/emls_to_domain.py ~/Downloads/mail_export/eml --domain todo_mail .
+# ...
+4433 mail files -> todo_mail: 3204 added, 487 updated, 742 skipped (superseded), 0 failed
+Updated 'todo_mail/index.md' with 3204 entries.
+kjell-olovhogdahl@MacBook-Pro ~/Documents/GitHub/chime %
+```
+
+But now I have all the imported todo-mails in this git repo where it does NOT belong!
+
+* So I need to figure out where to do the intermediate step eml-to-domain?
+* Then do domain_to_domain from that git repo to here for those who are to become chime.
+
+
+
 ## 20260915
 
 I now added the 'to_site.py' developed in my 'plaiground' git repo that orchestrates a local Jekyll site generation.
